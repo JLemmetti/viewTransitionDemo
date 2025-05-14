@@ -11,14 +11,28 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as AboutImport } from './routes/about'
+import { Route as Slide3Import } from './routes/slide3'
+import { Route as Slide2Import } from './routes/slide2'
+import { Route as Slide1Import } from './routes/slide1'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
-const AboutRoute = AboutImport.update({
-  id: '/about',
-  path: '/about',
+const Slide3Route = Slide3Import.update({
+  id: '/slide3',
+  path: '/slide3',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const Slide2Route = Slide2Import.update({
+  id: '/slide2',
+  path: '/slide2',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const Slide1Route = Slide1Import.update({
+  id: '/slide1',
+  path: '/slide1',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -39,11 +53,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
+    '/slide1': {
+      id: '/slide1'
+      path: '/slide1'
+      fullPath: '/slide1'
+      preLoaderRoute: typeof Slide1Import
+      parentRoute: typeof rootRoute
+    }
+    '/slide2': {
+      id: '/slide2'
+      path: '/slide2'
+      fullPath: '/slide2'
+      preLoaderRoute: typeof Slide2Import
+      parentRoute: typeof rootRoute
+    }
+    '/slide3': {
+      id: '/slide3'
+      path: '/slide3'
+      fullPath: '/slide3'
+      preLoaderRoute: typeof Slide3Import
       parentRoute: typeof rootRoute
     }
   }
@@ -53,37 +81,47 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/slide1': typeof Slide1Route
+  '/slide2': typeof Slide2Route
+  '/slide3': typeof Slide3Route
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/slide1': typeof Slide1Route
+  '/slide2': typeof Slide2Route
+  '/slide3': typeof Slide3Route
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/slide1': typeof Slide1Route
+  '/slide2': typeof Slide2Route
+  '/slide3': typeof Slide3Route
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about'
+  fullPaths: '/' | '/slide1' | '/slide2' | '/slide3'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about'
-  id: '__root__' | '/' | '/about'
+  to: '/' | '/slide1' | '/slide2' | '/slide3'
+  id: '__root__' | '/' | '/slide1' | '/slide2' | '/slide3'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
+  Slide1Route: typeof Slide1Route
+  Slide2Route: typeof Slide2Route
+  Slide3Route: typeof Slide3Route
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
+  Slide1Route: Slide1Route,
+  Slide2Route: Slide2Route,
+  Slide3Route: Slide3Route,
 }
 
 export const routeTree = rootRoute
@@ -97,14 +135,22 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/about"
+        "/slide1",
+        "/slide2",
+        "/slide3"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/about": {
-      "filePath": "about.tsx"
+    "/slide1": {
+      "filePath": "slide1.tsx"
+    },
+    "/slide2": {
+      "filePath": "slide2.tsx"
+    },
+    "/slide3": {
+      "filePath": "slide3.tsx"
     }
   }
 }
