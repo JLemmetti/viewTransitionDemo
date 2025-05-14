@@ -11,6 +11,7 @@ This project demonstrates a slide deck created with React, showcasing the use of
 ## Folder Structure
 
 - Each component resides in its own folder for better organization and maintainability.
+- `routeTree.gen.ts` is automatically created by TanStack Router. Do not touch it.
 
 ## Code Style
 
