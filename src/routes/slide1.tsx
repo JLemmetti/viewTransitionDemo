@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { useSlideNavigation } from '../hooks/useSlideNavigation';
+import { useSlideNavigation } from '@hooks/useSlideNavigation';
 
 export const Route = createFileRoute('/slide1')({
   component: Slide1,
