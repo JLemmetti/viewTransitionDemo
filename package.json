@@ -14,8 +14,8 @@
     "@tailwindcss/vite": "^4.1.6",
     "@tanstack/react-router": "^1.120.3",
     "@tanstack/react-router-devtools": "^1.120.3",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^0.0.0-experimental-4a45ba92-20250515",
+    "react-dom": "^0.0.0-experimental-4a45ba92-20250515",
     "react-icons": "^5.5.0",
     "tailwindcss": "^4.1.6"
   },
