@@ -1,13 +1,19 @@
 import { Link } from '@tanstack/react-router';
 import { FaHome } from 'react-icons/fa';
+import { MdOutlineSlideshow } from 'react-icons/md';
 
 const Navigation = () => {
   return (
-    <nav className="p-2 flex gap-2">
-      <Link to="/" className="flex items-center gap-1">
+    <nav className="p-4 flex gap-5 text-lg">
+      <Link to="/" className="flex items-center gap-1 hover:text-teal-500">
         <FaHome /> Home
       </Link>
-      <Link to="/slide1">Presentation</Link>
+      <Link
+        to="/slide1"
+        className="flex items-center gap-1 hover:text-teal-500"
+      >
+        <MdOutlineSlideshow /> Slides
+      </Link>
     </nav>
   );
 };
