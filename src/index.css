@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+html {
+  overflow: hidden; /* Prevents page moving when slides are navigated with arrow keys */
+}
+
 @keyframes slide-in {
   from {
     transform: translateY(100%);
