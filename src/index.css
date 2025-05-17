@@ -46,6 +46,7 @@ html {
   color: white;
   padding: 1rem;
   border-radius: 0.5rem;
+  transition: right 0.5s ease-in-out;
 
   &:before {
     content: '⬅️';
