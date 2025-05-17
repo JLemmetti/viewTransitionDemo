@@ -16,7 +16,11 @@
       The CSS is scoped to this document, so you can use any selectors you like.
       The styles will be applied to the elements inside the <body> tag.
     -->
-    <style class="playground" contenteditable>
+    <style
+      class="playground"
+      contenteditable
+      onkeydown="event.stopPropagation()"
+    >
       ::view-transition-new(slideUp) {
         animation: slide-in 0.5s ease-in-out;
       }
