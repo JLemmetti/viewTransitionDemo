@@ -1,1 +1,67 @@
 @import 'tailwindcss';
+
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+::view-transition-new(slideUp) {
+  animation: slide-in 0.5s ease-in-out;
+}
+::view-transition-old(slideUp) {
+  animation: slide-out 0.5s ease-in-out;
+}
+
+.playground {
+  position: absolute;
+  top: 0.5rem;
+  right: -475px;
+  display: block;
+  /* display: none; */
+  white-space: pre;
+  background-color: #333;
+  font-family: monospace;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  &:before {
+    content: '⬅️';
+    position: absolute;
+    top: 5px;
+    left: -35px;
+    padding: 0.1rem 0.3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: inherit;
+  }
+
+  &:focus {
+    right: 0.5rem;
+  }
+}
+
+/* Debug */
+
+/* header,
+footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+} */
