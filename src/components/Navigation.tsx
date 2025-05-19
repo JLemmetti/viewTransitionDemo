@@ -11,6 +11,9 @@ const Navigation = () => {
       <Link to="/Start" className="flex items-center gap-1 hover:text-teal-500">
         <MdOutlineSlideshow /> Slides
       </Link>
+      <Link to="/Demos" className="flex items-center gap-1 hover:text-teal-500">
+        <MdOutlineSlideshow /> Demos
+      </Link>
     </nav>
   );
 };
