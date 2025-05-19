@@ -2,11 +2,11 @@ import SlideWrapper from '@components/SlideWrapper';
 import { useSlideNavigation } from '@hooks/useSlideNavigation';
 import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute('/slide1')({
-  component: Slide1,
+export const Route = createFileRoute('/Start')({
+  component: RouteComponent,
 });
 
-function Slide1() {
+function RouteComponent() {
   useSlideNavigation();
 
   return (

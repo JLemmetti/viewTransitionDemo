@@ -7,7 +7,7 @@ import { useRouter } from '@tanstack/react-router';
 export function useSlideNavigation() {
   const router = useRouter();
 
-  const slideRoutes = ['/slide1', '/slide2', '/slide3']; // Define slide routes in order
+  const slideRoutes = ['/Start', '/ViewTransitions', '/TechStack']; // Define slide routes in order
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {

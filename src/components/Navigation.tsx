@@ -8,10 +8,7 @@ const Navigation = () => {
       <Link to="/" className="flex items-center gap-1 hover:text-teal-500">
         <FaHome /> Home
       </Link>
-      <Link
-        to="/slide1"
-        className="flex items-center gap-1 hover:text-teal-500"
-      >
+      <Link to="/Start" className="flex items-center gap-1 hover:text-teal-500">
         <MdOutlineSlideshow /> Slides
       </Link>
     </nav>

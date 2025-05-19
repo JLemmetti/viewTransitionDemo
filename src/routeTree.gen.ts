@@ -11,28 +11,35 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as Slide3Import } from './routes/slide3'
-import { Route as Slide2Import } from './routes/slide2'
-import { Route as Slide1Import } from './routes/slide1'
+import { Route as ViewTransitionsImport } from './routes/ViewTransitions'
+import { Route as TechStackImport } from './routes/TechStack'
+import { Route as StartImport } from './routes/Start'
+import { Route as DemosImport } from './routes/Demos'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
-const Slide3Route = Slide3Import.update({
-  id: '/slide3',
-  path: '/slide3',
+const ViewTransitionsRoute = ViewTransitionsImport.update({
+  id: '/ViewTransitions',
+  path: '/ViewTransitions',
   getParentRoute: () => rootRoute,
 } as any)
 
-const Slide2Route = Slide2Import.update({
-  id: '/slide2',
-  path: '/slide2',
+const TechStackRoute = TechStackImport.update({
+  id: '/TechStack',
+  path: '/TechStack',
   getParentRoute: () => rootRoute,
 } as any)
 
-const Slide1Route = Slide1Import.update({
-  id: '/slide1',
-  path: '/slide1',
+const StartRoute = StartImport.update({
+  id: '/Start',
+  path: '/Start',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DemosRoute = DemosImport.update({
+  id: '/Demos',
+  path: '/Demos',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -53,25 +60,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/slide1': {
-      id: '/slide1'
-      path: '/slide1'
-      fullPath: '/slide1'
-      preLoaderRoute: typeof Slide1Import
+    '/Demos': {
+      id: '/Demos'
+      path: '/Demos'
+      fullPath: '/Demos'
+      preLoaderRoute: typeof DemosImport
       parentRoute: typeof rootRoute
     }
-    '/slide2': {
-      id: '/slide2'
-      path: '/slide2'
-      fullPath: '/slide2'
-      preLoaderRoute: typeof Slide2Import
+    '/Start': {
+      id: '/Start'
+      path: '/Start'
+      fullPath: '/Start'
+      preLoaderRoute: typeof StartImport
       parentRoute: typeof rootRoute
     }
-    '/slide3': {
-      id: '/slide3'
-      path: '/slide3'
-      fullPath: '/slide3'
-      preLoaderRoute: typeof Slide3Import
+    '/TechStack': {
+      id: '/TechStack'
+      path: '/TechStack'
+      fullPath: '/TechStack'
+      preLoaderRoute: typeof TechStackImport
+      parentRoute: typeof rootRoute
+    }
+    '/ViewTransitions': {
+      id: '/ViewTransitions'
+      path: '/ViewTransitions'
+      fullPath: '/ViewTransitions'
+      preLoaderRoute: typeof ViewTransitionsImport
       parentRoute: typeof rootRoute
     }
   }
@@ -81,47 +95,52 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/slide1': typeof Slide1Route
-  '/slide2': typeof Slide2Route
-  '/slide3': typeof Slide3Route
+  '/Demos': typeof DemosRoute
+  '/Start': typeof StartRoute
+  '/TechStack': typeof TechStackRoute
+  '/ViewTransitions': typeof ViewTransitionsRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/slide1': typeof Slide1Route
-  '/slide2': typeof Slide2Route
-  '/slide3': typeof Slide3Route
+  '/Demos': typeof DemosRoute
+  '/Start': typeof StartRoute
+  '/TechStack': typeof TechStackRoute
+  '/ViewTransitions': typeof ViewTransitionsRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/slide1': typeof Slide1Route
-  '/slide2': typeof Slide2Route
-  '/slide3': typeof Slide3Route
+  '/Demos': typeof DemosRoute
+  '/Start': typeof StartRoute
+  '/TechStack': typeof TechStackRoute
+  '/ViewTransitions': typeof ViewTransitionsRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/slide1' | '/slide2' | '/slide3'
+  fullPaths: '/' | '/Demos' | '/Start' | '/TechStack' | '/ViewTransitions'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/slide1' | '/slide2' | '/slide3'
-  id: '__root__' | '/' | '/slide1' | '/slide2' | '/slide3'
+  to: '/' | '/Demos' | '/Start' | '/TechStack' | '/ViewTransitions'
+  id: '__root__' | '/' | '/Demos' | '/Start' | '/TechStack' | '/ViewTransitions'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  Slide1Route: typeof Slide1Route
-  Slide2Route: typeof Slide2Route
-  Slide3Route: typeof Slide3Route
+  DemosRoute: typeof DemosRoute
+  StartRoute: typeof StartRoute
+  TechStackRoute: typeof TechStackRoute
+  ViewTransitionsRoute: typeof ViewTransitionsRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  Slide1Route: Slide1Route,
-  Slide2Route: Slide2Route,
-  Slide3Route: Slide3Route,
+  DemosRoute: DemosRoute,
+  StartRoute: StartRoute,
+  TechStackRoute: TechStackRoute,
+  ViewTransitionsRoute: ViewTransitionsRoute,
 }
 
 export const routeTree = rootRoute
@@ -135,22 +154,26 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/slide1",
-        "/slide2",
-        "/slide3"
+        "/Demos",
+        "/Start",
+        "/TechStack",
+        "/ViewTransitions"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/slide1": {
-      "filePath": "slide1.tsx"
+    "/Demos": {
+      "filePath": "Demos.tsx"
     },
-    "/slide2": {
-      "filePath": "slide2.tsx"
+    "/Start": {
+      "filePath": "Start.tsx"
     },
-    "/slide3": {
-      "filePath": "slide3.tsx"
+    "/TechStack": {
+      "filePath": "TechStack.tsx"
+    },
+    "/ViewTransitions": {
+      "filePath": "ViewTransitions.tsx"
     }
   }
 }
