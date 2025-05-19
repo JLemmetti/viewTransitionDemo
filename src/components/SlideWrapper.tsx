@@ -6,7 +6,7 @@ export default function SlideWrapper({ children }: { children: ReactNode }) {
   return (
     <div
       style={{ viewTransitionName: 'slideUp' }}
-      className="slide-wrapper flex flex-col h-full"
+      className="flex flex-col h-full"
     >
       <header className="flex items-center justify-start">
         <ViewTransition name="tjsLogo">

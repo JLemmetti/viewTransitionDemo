@@ -3,10 +3,10 @@ import { createFileRoute } from '@tanstack/react-router';
 import { unstable_ViewTransition as ViewTransition } from 'react';
 
 export const Route = createFileRoute('/')({
-  component: Index,
+  component: RouteComponent,
 });
 
-function Index() {
+function RouteComponent() {
   return (
     <div className="flex flex-col items-center justify-center h-full space-y-25">
       <h1 className="text-6xl font-bold text-center">Welcome to TampereJS!</h1>
