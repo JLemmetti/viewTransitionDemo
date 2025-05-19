@@ -13,7 +13,7 @@ export default function SlideWrapper({ children }: { children: ReactNode }) {
           <img
             src={tamperejsLogo}
             alt="TampereJS Logo"
-            className="w-22 h-22"
+            className="w-18 h-18"
             style={{ viewTransitionName: 'tjsLogo' }}
           />
         </ViewTransition>
@@ -23,9 +23,14 @@ export default function SlideWrapper({ children }: { children: ReactNode }) {
         {children}
       </main>
 
-      <footer className="flex justify-end text-center">
-        <p className="text-3xl">Cirit / 22.5.2025</p>
-      </footer>
+      <ViewTransition name="footer">
+        <footer
+          className="flex justify-end text-center"
+          style={{ viewTransitionName: 'footer' }}
+        >
+          <p className="text-3xl">Cirit / 22.5.2025</p>
+        </footer>
+      </ViewTransition>
     </div>
   );
 }

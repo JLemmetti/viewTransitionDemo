@@ -8,7 +8,7 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen space-y-25">
+    <div className="flex flex-col items-center justify-center h-full space-y-25">
       <h1 className="text-6xl font-bold text-center">Welcome to TampereJS!</h1>
 
       <ViewTransition name="tjsLogo">
@@ -20,7 +20,14 @@ function Index() {
         />
       </ViewTransition>
 
-      <p className="text-3xl text-center">Cirit / 22.5.2025</p>
+      <ViewTransition name="footer">
+        <footer
+          className="flex justify-end text-center"
+          style={{ viewTransitionName: 'footer' }}
+        >
+          <p className="text-3xl">Cirit / 22.5.2025</p>
+        </footer>
+      </ViewTransition>
     </div>
   );
 }
