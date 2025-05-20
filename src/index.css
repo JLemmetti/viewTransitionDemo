@@ -26,6 +26,66 @@ html {
   }
 }
 
+@keyframes slide-in-reverse {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-reverse {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-to-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-to-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+::view-transition-new(description) {
+  animation: slide-to-left 0.5s ease-in-out;
+  /* animation-delay: 0.5s; */
+}
+::view-transition-old(description) {
+  /* animation: slide-to-right 0.5s ease-in-out; */
+}
+
+::view-transition-old(.slow-fade) {
+  animation-duration: 500ms;
+}
+
+::view-transition-new(.slow-fade) {
+  animation-duration: 500ms;
+}
+
 .playground {
   position: absolute;
   top: 0.5rem;

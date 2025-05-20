@@ -1,5 +1,5 @@
 {
-  "name": "viewtransitiondemo",
+  "name": "view-transition-demo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,8 +14,9 @@
     "@tailwindcss/vite": "^4.1.6",
     "@tanstack/react-router": "^1.120.3",
     "@tanstack/react-router-devtools": "^1.120.3",
-    "react": "^0.0.0-experimental-4a45ba92-20250515",
-    "react-dom": "^0.0.0-experimental-4a45ba92-20250515",
+    "qrcode.react": "^4.2.0",
+    "react": "^0.0.0-experimental-c4676e72-20250520",
+    "react-dom": "^0.0.0-experimental-c4676e72-20250520",
     "react-icons": "^5.5.0",
     "tailwindcss": "^4.1.6"
   },

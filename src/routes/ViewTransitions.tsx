@@ -4,6 +4,7 @@ import SlideHeader from '@components/SlideHeader';
 import SlideWrapper from '@components/SlideWrapper';
 import SlideList from '@components/SlideList';
 import SlideListItem from '@components/SlideListItem';
+import CodeExample from '@components/CodeExample';
 
 export const Route = createFileRoute('/ViewTransitions')({
   component: RouteComponent,
@@ -21,19 +22,21 @@ function RouteComponent() {
 
   return (
     <SlideWrapper>
-      <div className="p-2">
-        <SlideHeader title="View Transitions" />
+      <SlideHeader title="View Transitions" />
 
-        <SlideList>
-          <SlideListItem>First</SlideListItem>
-          <SlideListItem>Second</SlideListItem>
-          <SlideListItem>Third</SlideListItem>
-        </SlideList>
+      <SlideList>
+        <SlideListItem>
+          Native browser API for smooth transitions between UI states
+        </SlideListItem>
+        <SlideListItem>
+          Works for both single-page apps and multi-page apps
+        </SlideListItem>
+        <SlideListItem>Rendering is paused during transitions</SlideListItem>
+      </SlideList>
 
-        <pre className="outline-1 mt-5 p-4">
-          <code>{css}</code>
-        </pre>
-      </div>
+      {/* <div className="w-1/2">
+          <CodeExample>{css}</CodeExample>
+        </div> */}
     </SlideWrapper>
   );
 }

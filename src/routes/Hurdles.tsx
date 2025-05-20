@@ -1,12 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { useSlideNavigation } from '@hooks/useSlideNavigation';
-import SlideHeader from '@components/SlideHeader';
 import SlideWrapper from '@components/SlideWrapper';
-
+import SlideHeader from '@components/SlideHeader';
+import { useSlideNavigation } from '@hooks/useSlideNavigation';
 import SlideList from '@components/SlideList';
 import SlideListItem from '@components/SlideListItem';
 
-export const Route = createFileRoute('/TechStack')({
+export const Route = createFileRoute('/Hurdles')({
   component: RouteComponent,
 });
 
@@ -15,12 +14,10 @@ function RouteComponent() {
 
   return (
     <SlideWrapper>
-      <SlideHeader title="Tech Stack" />
-
+      <SlideHeader title="Hurdles" />
       <SlideList>
-        <SlideListItem>Vite</SlideListItem>
-        <SlideListItem>TanStack Router</SlideListItem>
-        <SlideListItem>React 19 Experimental</SlideListItem>
+        <SlideListItem>NPM issues with experimental React</SlideListItem>
+        <SlideListItem>All transitions trigger at once</SlideListItem>
       </SlideList>
     </SlideWrapper>
   );

@@ -11,17 +11,42 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ViewTransitionsInReactImport } from './routes/ViewTransitionsInReact'
+import { Route as ViewTransitions2Import } from './routes/ViewTransitions2'
 import { Route as ViewTransitionsImport } from './routes/ViewTransitions'
+import { Route as ThankYouImport } from './routes/ThankYou'
 import { Route as TechStackImport } from './routes/TechStack'
 import { Route as StartImport } from './routes/Start'
-import { Route as DemosImport } from './routes/Demos'
+import { Route as HurdlesImport } from './routes/Hurdles'
 import { Route as IndexImport } from './routes/index'
+import { Route as DemosIndexImport } from './routes/Demos/index'
+import { Route as Demos3Import } from './routes/Demos/3'
+import { Route as Demos2Import } from './routes/Demos/2'
+import { Route as Demos1Import } from './routes/Demos/1'
 
 // Create/Update Routes
+
+const ViewTransitionsInReactRoute = ViewTransitionsInReactImport.update({
+  id: '/ViewTransitionsInReact',
+  path: '/ViewTransitionsInReact',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ViewTransitions2Route = ViewTransitions2Import.update({
+  id: '/ViewTransitions2',
+  path: '/ViewTransitions2',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const ViewTransitionsRoute = ViewTransitionsImport.update({
   id: '/ViewTransitions',
   path: '/ViewTransitions',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ThankYouRoute = ThankYouImport.update({
+  id: '/ThankYou',
+  path: '/ThankYou',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -37,15 +62,39 @@ const StartRoute = StartImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const DemosRoute = DemosImport.update({
-  id: '/Demos',
-  path: '/Demos',
+const HurdlesRoute = HurdlesImport.update({
+  id: '/Hurdles',
+  path: '/Hurdles',
   getParentRoute: () => rootRoute,
 } as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DemosIndexRoute = DemosIndexImport.update({
+  id: '/Demos/',
+  path: '/Demos/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const Demos3Route = Demos3Import.update({
+  id: '/Demos/3',
+  path: '/Demos/3',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const Demos2Route = Demos2Import.update({
+  id: '/Demos/2',
+  path: '/Demos/2',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const Demos1Route = Demos1Import.update({
+  id: '/Demos/1',
+  path: '/Demos/1',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -60,11 +109,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/Demos': {
-      id: '/Demos'
-      path: '/Demos'
-      fullPath: '/Demos'
-      preLoaderRoute: typeof DemosImport
+    '/Hurdles': {
+      id: '/Hurdles'
+      path: '/Hurdles'
+      fullPath: '/Hurdles'
+      preLoaderRoute: typeof HurdlesImport
       parentRoute: typeof rootRoute
     }
     '/Start': {
@@ -81,11 +130,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TechStackImport
       parentRoute: typeof rootRoute
     }
+    '/ThankYou': {
+      id: '/ThankYou'
+      path: '/ThankYou'
+      fullPath: '/ThankYou'
+      preLoaderRoute: typeof ThankYouImport
+      parentRoute: typeof rootRoute
+    }
     '/ViewTransitions': {
       id: '/ViewTransitions'
       path: '/ViewTransitions'
       fullPath: '/ViewTransitions'
       preLoaderRoute: typeof ViewTransitionsImport
+      parentRoute: typeof rootRoute
+    }
+    '/ViewTransitions2': {
+      id: '/ViewTransitions2'
+      path: '/ViewTransitions2'
+      fullPath: '/ViewTransitions2'
+      preLoaderRoute: typeof ViewTransitions2Import
+      parentRoute: typeof rootRoute
+    }
+    '/ViewTransitionsInReact': {
+      id: '/ViewTransitionsInReact'
+      path: '/ViewTransitionsInReact'
+      fullPath: '/ViewTransitionsInReact'
+      preLoaderRoute: typeof ViewTransitionsInReactImport
+      parentRoute: typeof rootRoute
+    }
+    '/Demos/1': {
+      id: '/Demos/1'
+      path: '/Demos/1'
+      fullPath: '/Demos/1'
+      preLoaderRoute: typeof Demos1Import
+      parentRoute: typeof rootRoute
+    }
+    '/Demos/2': {
+      id: '/Demos/2'
+      path: '/Demos/2'
+      fullPath: '/Demos/2'
+      preLoaderRoute: typeof Demos2Import
+      parentRoute: typeof rootRoute
+    }
+    '/Demos/3': {
+      id: '/Demos/3'
+      path: '/Demos/3'
+      fullPath: '/Demos/3'
+      preLoaderRoute: typeof Demos3Import
+      parentRoute: typeof rootRoute
+    }
+    '/Demos/': {
+      id: '/Demos/'
+      path: '/Demos'
+      fullPath: '/Demos'
+      preLoaderRoute: typeof DemosIndexImport
       parentRoute: typeof rootRoute
     }
   }
@@ -95,52 +193,124 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/Demos': typeof DemosRoute
+  '/Hurdles': typeof HurdlesRoute
   '/Start': typeof StartRoute
   '/TechStack': typeof TechStackRoute
+  '/ThankYou': typeof ThankYouRoute
   '/ViewTransitions': typeof ViewTransitionsRoute
+  '/ViewTransitions2': typeof ViewTransitions2Route
+  '/ViewTransitionsInReact': typeof ViewTransitionsInReactRoute
+  '/Demos/1': typeof Demos1Route
+  '/Demos/2': typeof Demos2Route
+  '/Demos/3': typeof Demos3Route
+  '/Demos': typeof DemosIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/Demos': typeof DemosRoute
+  '/Hurdles': typeof HurdlesRoute
   '/Start': typeof StartRoute
   '/TechStack': typeof TechStackRoute
+  '/ThankYou': typeof ThankYouRoute
   '/ViewTransitions': typeof ViewTransitionsRoute
+  '/ViewTransitions2': typeof ViewTransitions2Route
+  '/ViewTransitionsInReact': typeof ViewTransitionsInReactRoute
+  '/Demos/1': typeof Demos1Route
+  '/Demos/2': typeof Demos2Route
+  '/Demos/3': typeof Demos3Route
+  '/Demos': typeof DemosIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/Demos': typeof DemosRoute
+  '/Hurdles': typeof HurdlesRoute
   '/Start': typeof StartRoute
   '/TechStack': typeof TechStackRoute
+  '/ThankYou': typeof ThankYouRoute
   '/ViewTransitions': typeof ViewTransitionsRoute
+  '/ViewTransitions2': typeof ViewTransitions2Route
+  '/ViewTransitionsInReact': typeof ViewTransitionsInReactRoute
+  '/Demos/1': typeof Demos1Route
+  '/Demos/2': typeof Demos2Route
+  '/Demos/3': typeof Demos3Route
+  '/Demos/': typeof DemosIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/Demos' | '/Start' | '/TechStack' | '/ViewTransitions'
+  fullPaths:
+    | '/'
+    | '/Hurdles'
+    | '/Start'
+    | '/TechStack'
+    | '/ThankYou'
+    | '/ViewTransitions'
+    | '/ViewTransitions2'
+    | '/ViewTransitionsInReact'
+    | '/Demos/1'
+    | '/Demos/2'
+    | '/Demos/3'
+    | '/Demos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/Demos' | '/Start' | '/TechStack' | '/ViewTransitions'
-  id: '__root__' | '/' | '/Demos' | '/Start' | '/TechStack' | '/ViewTransitions'
+  to:
+    | '/'
+    | '/Hurdles'
+    | '/Start'
+    | '/TechStack'
+    | '/ThankYou'
+    | '/ViewTransitions'
+    | '/ViewTransitions2'
+    | '/ViewTransitionsInReact'
+    | '/Demos/1'
+    | '/Demos/2'
+    | '/Demos/3'
+    | '/Demos'
+  id:
+    | '__root__'
+    | '/'
+    | '/Hurdles'
+    | '/Start'
+    | '/TechStack'
+    | '/ThankYou'
+    | '/ViewTransitions'
+    | '/ViewTransitions2'
+    | '/ViewTransitionsInReact'
+    | '/Demos/1'
+    | '/Demos/2'
+    | '/Demos/3'
+    | '/Demos/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DemosRoute: typeof DemosRoute
+  HurdlesRoute: typeof HurdlesRoute
   StartRoute: typeof StartRoute
   TechStackRoute: typeof TechStackRoute
+  ThankYouRoute: typeof ThankYouRoute
   ViewTransitionsRoute: typeof ViewTransitionsRoute
+  ViewTransitions2Route: typeof ViewTransitions2Route
+  ViewTransitionsInReactRoute: typeof ViewTransitionsInReactRoute
+  Demos1Route: typeof Demos1Route
+  Demos2Route: typeof Demos2Route
+  Demos3Route: typeof Demos3Route
+  DemosIndexRoute: typeof DemosIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DemosRoute: DemosRoute,
+  HurdlesRoute: HurdlesRoute,
   StartRoute: StartRoute,
   TechStackRoute: TechStackRoute,
+  ThankYouRoute: ThankYouRoute,
   ViewTransitionsRoute: ViewTransitionsRoute,
+  ViewTransitions2Route: ViewTransitions2Route,
+  ViewTransitionsInReactRoute: ViewTransitionsInReactRoute,
+  Demos1Route: Demos1Route,
+  Demos2Route: Demos2Route,
+  Demos3Route: Demos3Route,
+  DemosIndexRoute: DemosIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -154,17 +324,24 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/Demos",
+        "/Hurdles",
         "/Start",
         "/TechStack",
-        "/ViewTransitions"
+        "/ThankYou",
+        "/ViewTransitions",
+        "/ViewTransitions2",
+        "/ViewTransitionsInReact",
+        "/Demos/1",
+        "/Demos/2",
+        "/Demos/3",
+        "/Demos/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/Demos": {
-      "filePath": "Demos.tsx"
+    "/Hurdles": {
+      "filePath": "Hurdles.tsx"
     },
     "/Start": {
       "filePath": "Start.tsx"
@@ -172,8 +349,29 @@ export const routeTree = rootRoute
     "/TechStack": {
       "filePath": "TechStack.tsx"
     },
+    "/ThankYou": {
+      "filePath": "ThankYou.tsx"
+    },
     "/ViewTransitions": {
       "filePath": "ViewTransitions.tsx"
+    },
+    "/ViewTransitions2": {
+      "filePath": "ViewTransitions2.tsx"
+    },
+    "/ViewTransitionsInReact": {
+      "filePath": "ViewTransitionsInReact.tsx"
+    },
+    "/Demos/1": {
+      "filePath": "Demos/1.tsx"
+    },
+    "/Demos/2": {
+      "filePath": "Demos/2.tsx"
+    },
+    "/Demos/3": {
+      "filePath": "Demos/3.tsx"
+    },
+    "/Demos/": {
+      "filePath": "Demos/index.tsx"
     }
   }
 }

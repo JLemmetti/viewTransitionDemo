@@ -15,16 +15,17 @@ function RouteComponent() {
         <img
           src={tamperejsLogo}
           alt="TampereJS Logo"
-          className="w-32 h-32"
+          className="w-64 h-64"
           style={{ viewTransitionName: 'tjsLogo' }}
         />
       </ViewTransition>
 
       <ViewTransition name="footer">
         <footer
-          className="flex justify-end text-center"
+          className="flex justify-end text-center gap-10"
           style={{ viewTransitionName: 'footer' }}
         >
+          <p className="text-3xl">Jurkka Lemmetti</p>
           <p className="text-3xl">Cirit / 22.5.2025</p>
         </footer>
       </ViewTransition>
