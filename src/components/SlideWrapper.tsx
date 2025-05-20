@@ -19,7 +19,7 @@ export default function SlideWrapper({ children }: { children: ReactNode }) {
         </ViewTransition>
       </header>
 
-      <main className="flex-grow flex items-start justify-start py-10 px-15">
+      <main className="flex-grow items-start justify-start py-10 px-15">
         {children}
       </main>
 
