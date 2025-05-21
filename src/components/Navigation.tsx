@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router';
 import { FaHome } from 'react-icons/fa';
 import { MdOutlineSlideshow } from 'react-icons/md';
+import { VscBeaker } from 'react-icons/vsc'; // More fitting icon for Demos
 
 const Navigation = () => {
   return (
@@ -12,7 +13,7 @@ const Navigation = () => {
         <MdOutlineSlideshow /> Slides
       </Link>
       <Link to="/Demos" className="flex items-center gap-1 hover:text-teal-500">
-        <MdOutlineSlideshow /> Demos
+        <VscBeaker /> Demos
       </Link>
     </nav>
   );
