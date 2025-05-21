@@ -10,6 +10,8 @@ export const Route = createFileRoute('/ViewTransitionsInReact')({
   component: RouteComponent,
 });
 
+const react19Example = `npm i react@experimental react-dom@experimental`;
+
 const createRouterExample = `const router = createRouter({
   routeTree,
   defaultViewTransition: true,
@@ -24,15 +26,12 @@ function RouteComponent() {
 
       <div className="flex">
         <SlideList>
-          <SlideListItem>
-            React integration with the View Transition API
-          </SlideListItem>
-          <SlideListItem>Benefits of declarative animations</SlideListItem>
-          <SlideListItem>Examples of seamless transitions</SlideListItem>
+          <SlideListItem>React 19 experimental</SlideListItem>
+          <CodeExample>{react19Example}</CodeExample>
+          <SlideListItem>A router</SlideListItem>
+          <CodeExample>{createRouterExample}</CodeExample>
         </SlideList>
       </div>
-
-      <CodeExample>{createRouterExample}</CodeExample>
     </SlideWrapper>
   );
 }
