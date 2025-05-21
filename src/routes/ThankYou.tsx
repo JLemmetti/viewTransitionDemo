@@ -15,6 +15,8 @@ function RouteComponent() {
     <SlideWrapper>
       <SlideHeader title="Thank You!" className="text-center" />
 
+      <p className="text-center text-4xl">Questions?</p>
+
       <QRCodeSVG
         value="https://github.com/JLemmetti/viewTransitionDemo"
         size={400}
