@@ -31,12 +31,12 @@ function RouteComponent() {
       </div>
       {selectedMovie && (
         <div className="w-full bg-gray-800 text-white p-4 rounded">
-          <h2 className="text-3xl font-bold">{selectedMovie}</h2>
+          <h2 className="mb-6 text-6xl font-bold">{selectedMovie}</h2>
 
           <div className="flex justify-between">
             <div style={{ viewTransitionName: 'description' }}>
-              <p className="mt-2">Directed by: Christopher Nolan</p>
-              <p className="py-8">Details about {selectedMovie}...</p>
+              <p className="mt-6 text-2xl">Directed by: Christopher Nolan</p>
+              <p className="py-8 text-2xl">Details about {selectedMovie}...</p>
             </div>
             <ViewTransition name={`movie-${selectedMovie}`}>
               <div
@@ -73,7 +73,7 @@ function RouteComponent() {
               key={movie}
             >
               <div
-                className="w-32 h-48 bg-blue-500 text-white flex items-center justify-center cursor-pointer rounded"
+                className="w-32 h-48 bg-blue-500 text-white text-md flex items-center justify-center cursor-pointer rounded"
                 onClick={() =>
                   startTransition(() => {
                     setSelectedMovie(movie);

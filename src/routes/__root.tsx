@@ -1,5 +1,5 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
-// import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import Navigation from '@components/Navigation';
 
 export const Route = createRootRoute({
@@ -13,7 +13,7 @@ export const Route = createRootRoute({
         <Outlet />
       </div>
 
-      {/* <TanStackRouterDevtools position="bottom-right" /> */}
+      <TanStackRouterDevtools position="bottom-right" />
     </div>
   ),
 });
