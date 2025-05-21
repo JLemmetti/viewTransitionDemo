@@ -21,12 +21,11 @@
       contenteditable
       onkeydown="event.stopPropagation()"
     >
-      ::view-transition-new(slideUp) {
-        animation: slide-in 0.5s ease-in-out;
-      }
       ::view-transition-old(slideUp) {
         animation: slide-out 0.5s ease-in-out;
-        /* animation-delay: 0.5s; */
+      }
+      ::view-transition-new(slideUp) {
+        animation: slide-in 0.5s ease-in-out;
       }
     </style>
   </body>
