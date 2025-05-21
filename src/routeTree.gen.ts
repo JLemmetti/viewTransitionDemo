@@ -17,6 +17,7 @@ import { Route as ViewTransitions2Import } from './routes/ViewTransitions2'
 import { Route as ViewTransitionsImport } from './routes/ViewTransitions'
 import { Route as ThankYouImport } from './routes/ThankYou'
 import { Route as StartImport } from './routes/Start'
+import { Route as LinksImport } from './routes/Links'
 import { Route as HurdlesImport } from './routes/Hurdles'
 import { Route as DemoImport } from './routes/Demo'
 import { Route as IndexImport } from './routes/index'
@@ -60,6 +61,12 @@ const ThankYouRoute = ThankYouImport.update({
 const StartRoute = StartImport.update({
   id: '/Start',
   path: '/Start',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const LinksRoute = LinksImport.update({
+  id: '/Links',
+  path: '/Links',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -128,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/Hurdles'
       fullPath: '/Hurdles'
       preLoaderRoute: typeof HurdlesImport
+      parentRoute: typeof rootRoute
+    }
+    '/Links': {
+      id: '/Links'
+      path: '/Links'
+      fullPath: '/Links'
+      preLoaderRoute: typeof LinksImport
       parentRoute: typeof rootRoute
     }
     '/Start': {
@@ -209,6 +223,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/Demo': typeof DemoRoute
   '/Hurdles': typeof HurdlesRoute
+  '/Links': typeof LinksRoute
   '/Start': typeof StartRoute
   '/ThankYou': typeof ThankYouRoute
   '/ViewTransitions': typeof ViewTransitionsRoute
@@ -225,6 +240,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/Demo': typeof DemoRoute
   '/Hurdles': typeof HurdlesRoute
+  '/Links': typeof LinksRoute
   '/Start': typeof StartRoute
   '/ThankYou': typeof ThankYouRoute
   '/ViewTransitions': typeof ViewTransitionsRoute
@@ -242,6 +258,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/Demo': typeof DemoRoute
   '/Hurdles': typeof HurdlesRoute
+  '/Links': typeof LinksRoute
   '/Start': typeof StartRoute
   '/ThankYou': typeof ThankYouRoute
   '/ViewTransitions': typeof ViewTransitionsRoute
@@ -260,6 +277,7 @@ export interface FileRouteTypes {
     | '/'
     | '/Demo'
     | '/Hurdles'
+    | '/Links'
     | '/Start'
     | '/ThankYou'
     | '/ViewTransitions'
@@ -275,6 +293,7 @@ export interface FileRouteTypes {
     | '/'
     | '/Demo'
     | '/Hurdles'
+    | '/Links'
     | '/Start'
     | '/ThankYou'
     | '/ViewTransitions'
@@ -290,6 +309,7 @@ export interface FileRouteTypes {
     | '/'
     | '/Demo'
     | '/Hurdles'
+    | '/Links'
     | '/Start'
     | '/ThankYou'
     | '/ViewTransitions'
@@ -307,6 +327,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DemoRoute: typeof DemoRoute
   HurdlesRoute: typeof HurdlesRoute
+  LinksRoute: typeof LinksRoute
   StartRoute: typeof StartRoute
   ThankYouRoute: typeof ThankYouRoute
   ViewTransitionsRoute: typeof ViewTransitionsRoute
@@ -323,6 +344,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DemoRoute: DemoRoute,
   HurdlesRoute: HurdlesRoute,
+  LinksRoute: LinksRoute,
   StartRoute: StartRoute,
   ThankYouRoute: ThankYouRoute,
   ViewTransitionsRoute: ViewTransitionsRoute,
@@ -348,6 +370,7 @@ export const routeTree = rootRoute
         "/",
         "/Demo",
         "/Hurdles",
+        "/Links",
         "/Start",
         "/ThankYou",
         "/ViewTransitions",
@@ -368,6 +391,9 @@ export const routeTree = rootRoute
     },
     "/Hurdles": {
       "filePath": "Hurdles.tsx"
+    },
+    "/Links": {
+      "filePath": "Links.tsx"
     },
     "/Start": {
       "filePath": "Start.tsx"

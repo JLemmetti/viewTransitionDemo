@@ -15,6 +15,7 @@ export function useSlideNavigation() {
     '/ViewTransitionsInReact2',
     '/Demo',
     '/Hurdles',
+    '/Links',
     '/ThankYou',
   ]; // Define slide routes in order
 
