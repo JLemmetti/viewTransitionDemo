@@ -89,13 +89,14 @@ html {
 .playground {
   position: absolute;
   top: 0.5rem;
-  right: -475px;
+  right: -50rem;
+  width: 50rem;
   display: block;
   /* display: none; */
-  white-space: pre;
+  white-space: pre-wrap;
   background-color: rgba(0, 0, 0, 0.9);
   font-family: monospace;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 0.5rem;
