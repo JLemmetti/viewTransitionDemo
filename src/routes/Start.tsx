@@ -11,8 +11,8 @@ function RouteComponent() {
 
   return (
     <SlideWrapper>
-      <div className="w-full outline-gray-700 flex flex-col items-center justify-center h-full">
-        <h1 className="text-center text-5xl mb-4">
+      <div className="header-fancy w-full flex flex-col items-center justify-center h-full">
+        <h1 className="text-center text-5xl mb-6">
           Unlocking Native Animations
         </h1>
         <h2 className="text-center text-3xl">

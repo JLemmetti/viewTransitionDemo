@@ -8,9 +8,9 @@ interface CodeExampleProps {
 const CodeExample: React.FC<CodeExampleProps> = ({ children, className }) => {
   return (
     <pre
-      className={`bg-gray-900 py-4 px-6 rounded-md overflow-auto self-center ${className}`}
+      className={`bg-gradient-to-br from-gray-900 via-blue-950 to-purple-900 py-6 px-8 rounded-2xl overflow-auto self-center shadow-xl border border-blue-900/20 ${className}`}
     >
-      <code className="text-xl">{children}</code>
+      <code className="text-xl text-blue-200 font-mono">{children}</code>
     </pre>
   );
 };
