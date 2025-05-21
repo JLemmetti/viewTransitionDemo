@@ -9,7 +9,7 @@ export const Route = createFileRoute('/')({
 function RouteComponent() {
   return (
     <div className="flex flex-col items-center justify-center h-full space-y-25">
-      <h1 className="header-fancy text-6xl font-bold text-center">
+      <h1 className="header-fancy text-6xl font-bold text-center pb-6">
         Welcome to TampereJS!
       </h1>
 

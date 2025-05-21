@@ -4,10 +4,10 @@ import Navigation from '@components/Navigation';
 
 export const Route = createRootRoute({
   component: () => (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-950 to-purple-900 min-h-screen flex flex-col">
+    <div className="bg-gray-800 h-screen flex flex-col">
       <Navigation />
 
-      <div className="p-8 m-8 bg-white/5 rounded-3xl shadow-2xl flex-grow">
+      <div className="p-6 m-6 bg-gradient-to-br from-gray-900 via-blue-950 to-purple-900 rounded-lg flex-grow">
         <Outlet />
       </div>
 
