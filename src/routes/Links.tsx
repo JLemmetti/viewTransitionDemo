@@ -14,7 +14,7 @@ function RouteComponent() {
 
   return (
     <SlideWrapper>
-      <SlideHeader title="Links" className="text-center" />
+      <SlideHeader title="Links" />
       <SlideList>
         <SlideListItem>
           <a

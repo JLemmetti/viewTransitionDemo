@@ -26,7 +26,7 @@ function RouteComponent() {
 
   return (
     <div className="flex flex-col items-center space-y-4">
-      <div className="w-full h-50 bg-gray-800 text-white flex items-center justify-center text-4xl font-bold mb-4">
+      <div className="w-full h-40 bg-gray-800 text-white flex items-center justify-center text-4xl font-bold mb-4">
         Imaginary Movie Rentals
       </div>
       {selectedMovie && (
@@ -40,7 +40,7 @@ function RouteComponent() {
             </div>
             <ViewTransition name={`movie-${selectedMovie}`}>
               <div
-                className="w-64 h-96 bg-blue-500 text-2xl text-white flex items-center justify-center cursor-pointer rounded"
+                className="w-50 h-75 bg-blue-500 text-2xl text-white flex items-center justify-center cursor-pointer rounded"
                 onClick={() =>
                   startTransition(() => {
                     setSelectedMovie(null);
