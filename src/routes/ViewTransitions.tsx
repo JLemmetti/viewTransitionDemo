@@ -32,6 +32,13 @@ function RouteComponent() {
           Works for both single-page apps and multi-page apps
         </SlideListItem>
         <SlideListItem>Rendering is paused during transitions</SlideListItem>
+        <SlideListItem>Only works on asynchronous updates</SlideListItem>
+        <SlideList>
+          <SlideListItem>Route changes</SlideListItem>
+          <SlideListItem>startTransition()</SlideListItem>
+          <SlideListItem>useDeferredValue()</SlideListItem>
+          <SlideListItem>&lt;Suspense&gt;</SlideListItem>
+        </SlideList>
       </SlideList>
 
       {/* <div className="w-1/2">

@@ -30,8 +30,6 @@ function RouteComponent() {
           <ViewTransition key={box}>
             <div
               style={{
-                // transform: positions[position],
-                // viewTransitionName: 'box2',
                 transition: 'transform 0.5s ease-in-out',
               }}
               className="w-32 h-32 bg-blue-500 text-white flex items-center justify-center rounded-2xl cursor-pointer"

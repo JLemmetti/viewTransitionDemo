@@ -9,9 +9,11 @@ export const Route = createFileRoute('/')({
 function RouteComponent() {
   return (
     <div className="flex flex-col items-center justify-center h-full space-y-25">
-      <h1 className="text-6xl font-bold text-center">Welcome to TampereJS!</h1>
+      <h1 className="header-fancy text-6xl font-bold text-center pb-6">
+        Welcome to TampereJS!
+      </h1>
 
-      <ViewTransition name="tjsLogo">
+      <ViewTransition>
         <img
           src={tamperejsLogo}
           alt="TampereJS Logo"
@@ -20,13 +22,13 @@ function RouteComponent() {
         />
       </ViewTransition>
 
-      <ViewTransition name="footer">
+      <ViewTransition>
         <footer
           className="flex justify-end text-center gap-10"
           style={{ viewTransitionName: 'footer' }}
         >
-          <p className="text-3xl">Jurkka Lemmetti</p>
-          <p className="text-3xl">Cirit / 22.5.2025</p>
+          <p className="header-fancy text-3xl">Jurkka Lemmetti</p>
+          <p className="header-fancy text-3xl">Cirit / 22.5.2025</p>
         </footer>
       </ViewTransition>
     </div>

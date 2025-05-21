@@ -13,19 +13,24 @@ function RouteComponent() {
 
   return (
     <SlideWrapper>
-      <SlideHeader title="Thank You!" />
-      <div className="text-center mt-10 text-xl">
-        <p>Thank you for viewing this presentation.</p>
-        <p>Feel free to reach out for any questions or feedback!</p>
-      </div>
+      <SlideHeader title="Thank You!" className="text-center" />
+
+      <p className="text-center text-4xl">Questions?</p>
 
       <QRCodeSVG
         value="https://github.com/JLemmetti/viewTransitionDemo"
-        size={300}
+        size={400}
         className="mx-auto mt-10"
       />
-      <p className="mt-10 text-center text-2xl">
-        https://github.com/JLemmetti/viewTransitionDemo
+      <p className="mt-10 text-center text-4xl">
+        <a
+          href="https://github.com/JLemmetti/viewTransitionDemo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:text-blue-300"
+        >
+          https://github.com/JLemmetti/viewTransitionDemo
+        </a>
       </p>
     </SlideWrapper>
   );

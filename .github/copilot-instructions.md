@@ -24,7 +24,7 @@ This project demonstrates a slide deck created with React, showcasing the use of
 ## Routing
 
 - Implement routing using **TanStack Router**.
-- When adding and removing slides, remember to update `useSlideNavigation.ts` hook.
+- When adding and removing slides, remember to update `slideRoutes` array in `src/hooks/useSlideNavigation.ts` hook.
 - Add `useSlideNavigation` hook to new slides.
 
 ## React Components

@@ -1,9 +1,10 @@
 interface SlideHeaderProps {
   title: string;
+  className?: string;
 }
 
-const SlideHeader: React.FC<SlideHeaderProps> = ({ title }) => {
-  return <h1 className="text-6xl mb-14">{title}</h1>;
+const SlideHeader: React.FC<SlideHeaderProps> = ({ title, className = '' }) => {
+  return <h1 className={`header-fancy text-6xl  ${className}`}>{title}</h1>;
 };
 
 export default SlideHeader;

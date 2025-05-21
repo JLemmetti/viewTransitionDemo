@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+.header-fancy {
+  @apply text-6xl mb-4 font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-lg;
+}
+
 html {
   overflow: hidden; /* Prevents page moving when slides are navigated with arrow keys */
 }
@@ -70,9 +74,9 @@ html {
   }
 }
 
+/* Demo 3 */
 ::view-transition-new(description) {
   animation: slide-to-left 0.5s ease-in-out;
-  /* animation-delay: 0.5s; */
 }
 ::view-transition-old(description) {
   /* animation: slide-to-right 0.5s ease-in-out; */
@@ -87,33 +91,35 @@ html {
 }
 
 .playground {
+  display: block;
   position: absolute;
   top: 0.5rem;
-  right: -475px;
-  display: block;
-  /* display: none; */
-  white-space: pre;
+  right: -50rem;
+  width: 50rem;
+  transition: right 0.2s ease-in-out;
+
+  white-space: pre-wrap;
   background-color: rgba(0, 0, 0, 0.9);
   font-family: monospace;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 0.5rem;
-  transition: right 0.2s ease-in-out;
-
-  &:before {
-    content: '⏴';
-    color: #777;
-    position: absolute;
-    top: 5px;
-    left: -35px;
-    padding: 0.1rem 0.5rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: inherit;
-  }
 
   &:focus {
     right: 0.5rem;
+  }
+
+  &:before {
+    position: absolute;
+    content: '⏴';
+    top: 5px;
+    left: -35px;
+
+    color: #777;
+    padding: 0.1rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: inherit;
   }
 }
 

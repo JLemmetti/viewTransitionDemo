@@ -6,30 +6,33 @@ import SlideList from '@components/SlideList';
 import SlideListItem from '@components/SlideListItem';
 import CodeExample from '@components/CodeExample';
 
-export const Route = createFileRoute('/ViewTransitionsInReact')({
+export const Route = createFileRoute('/ViewTransitionsInReact2')({
   component: RouteComponent,
 });
 
-const react19Example = `npm i react@experimental react-dom@experimental`;
+const componentExample = `import { unstable_ViewTransition as ViewTransition } from 'react';`;
 
-const createRouterExample = `// TanStack Router
-const router = createRouter({
-  routeTree,
-  defaultViewTransition: true,
-});`;
+const createRouterExample = `<ViewTransition>
+  <img
+    src={tamperejsLogo}
+    alt="TampereJS Logo"
+    className="w-18 h-18"
+    style={{ viewTransitionName: 'tjsLogo' }}
+  />
+</ViewTransition>`;
 
 function RouteComponent() {
   useSlideNavigation();
 
   return (
     <SlideWrapper>
-      <SlideHeader title="View Transitions in React" />
+      <SlideHeader title="View Transitions in React pt. 2" />
 
       <div className="flex">
         <SlideList>
-          <SlideListItem>React 19 experimental</SlideListItem>
-          <CodeExample>{react19Example}</CodeExample>
-          <SlideListItem>A router</SlideListItem>
+          <SlideListItem>ViewTransition component</SlideListItem>
+          <CodeExample>{componentExample}</CodeExample>
+          <SlideListItem>Item on a page to animate</SlideListItem>
           <CodeExample>{createRouterExample}</CodeExample>
         </SlideList>
       </div>

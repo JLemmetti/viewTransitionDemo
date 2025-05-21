@@ -26,7 +26,6 @@ function RouteComponent() {
         <div
           style={{
             transform: positions[position],
-            viewTransitionName: 'box',
             transition: 'transform 0.5s ease-in-out',
           }}
           className="absolute mt-50 ml-10 bg-amber-800 inline p-2 text-2xl rounded-lg text-gray-50 cursor-pointer"
