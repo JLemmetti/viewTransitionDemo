@@ -17,7 +17,10 @@ function RouteComponent() {
       <SlideHeader title="Hurdles" />
       <SlideList>
         <SlideListItem>NPM issues with experimental React</SlideListItem>
-        <SlideListItem>All transitions trigger at once</SlideListItem>
+        <SlideListItem>All transitions on page trigger at once</SlideListItem>
+        <SlideListItem>
+          You can't always configure everything on React side
+        </SlideListItem>
       </SlideList>
     </SlideWrapper>
   );

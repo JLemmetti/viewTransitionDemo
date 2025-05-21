@@ -11,7 +11,7 @@ function RouteComponent() {
     <div className="flex flex-col items-center justify-center h-full space-y-25">
       <h1 className="text-6xl font-bold text-center">Welcome to TampereJS!</h1>
 
-      <ViewTransition name="tjsLogo">
+      <ViewTransition>
         <img
           src={tamperejsLogo}
           alt="TampereJS Logo"
@@ -20,7 +20,7 @@ function RouteComponent() {
         />
       </ViewTransition>
 
-      <ViewTransition name="footer">
+      <ViewTransition>
         <footer
           className="flex justify-end text-center gap-10"
           style={{ viewTransitionName: 'footer' }}

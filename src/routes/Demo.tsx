@@ -2,7 +2,7 @@ import SlideWrapper from '@components/SlideWrapper';
 import { useSlideNavigation } from '@hooks/useSlideNavigation';
 import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute('/Start')({
+export const Route = createFileRoute('/Demo')({
   component: RouteComponent,
 });
 
@@ -12,12 +12,7 @@ function RouteComponent() {
   return (
     <SlideWrapper>
       <div className="w-full outline-gray-700 flex flex-col items-center justify-center h-full">
-        <h1 className="text-center text-5xl mb-4">
-          Unlocking Native Animations
-        </h1>
-        <h2 className="text-center text-3xl">
-          The View Transition API and React
-        </h2>
+        <h1 className="text-center text-8xl mb-4">Demo</h1>
       </div>
     </SlideWrapper>
   );

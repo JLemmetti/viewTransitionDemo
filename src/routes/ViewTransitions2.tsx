@@ -25,11 +25,22 @@ function RouteComponent() {
         <div className="flex gap-x-6">
           <SlideList>
             <SlideListItem>Works on most browsers</SlideListItem>
-            <SlideListItem>
-              UI elements in different states can be connected with{' '}
-              <strong>view-transition-name</strong>
-            </SlideListItem>
             <SlideListItem>Trivial to add to multi-page apps</SlideListItem>
+            <SlideListItem>
+              UI elements in different states needs to be connected by
+              transition name
+            </SlideListItem>
+            <SlideList>
+              <SlideListItem>
+                With <strong>view-transition-name</strong> in CSS
+              </SlideListItem>
+              <SlideListItem>
+                With <strong>name</strong> parameter in React
+              </SlideListItem>
+            </SlideList>
+            <SlideListItem>
+              You can mix-and-match with CSS and React transitions
+            </SlideListItem>
           </SlideList>
           <CodeExample className="w-3/5">{css}</CodeExample>
         </div>

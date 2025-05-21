@@ -12,7 +12,7 @@ function RouteComponent() {
       <div className="flex justify-between">
         <h1 className="text-4xl mb-6">Demos</h1>
         <ViewTransition name="tjsLogo">
-          <Link to="/ThankYou">
+          <Link to="/Hurdles">
             <img
               src={tamperejsLogo}
               alt="TampereJS Logo"
@@ -23,20 +23,18 @@ function RouteComponent() {
         </ViewTransition>
       </div>
 
-      <ul className="flex gap-4">
+      <ul className="flex gap-10 justify-center items-center mt-30">
         <li>
-          <ViewTransition>
-            <Link
-              className="bg-amber-700 px-4 py-2 rounded-full text-2xl hover:bg-amber-600"
-              to="/Demos/1"
-            >
-              1
-            </Link>
-          </ViewTransition>
+          <Link
+            className="bg-amber-700 px-5 py-2 rounded-full text-4xl hover:bg-amber-600"
+            to="/Demos/1"
+          >
+            1
+          </Link>
         </li>
         <li>
           <Link
-            className="bg-amber-700 px-4 py-2 rounded-full text-2xl hover:bg-amber-600"
+            className="bg-amber-700 px-5 py-2 rounded-full text-4xl hover:bg-amber-600"
             to="/Demos/2"
           >
             2
@@ -44,7 +42,7 @@ function RouteComponent() {
         </li>
         <li>
           <Link
-            className="bg-amber-700 px-4 py-2 rounded-full text-2xl hover:bg-amber-600"
+            className="bg-amber-700 px-5 py-2 rounded-full text-4xl hover:bg-amber-600"
             to="/Demos/3"
           >
             3

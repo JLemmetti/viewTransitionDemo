@@ -10,7 +10,7 @@ export default function SlideWrapper({ children }: { children: ReactNode }) {
       className="flex flex-col h-full"
     >
       <header className="flex items-center justify-start">
-        <ViewTransition name="tjsLogo">
+        <ViewTransition>
           <Link to="/">
             <img
               src={tamperejsLogo}
@@ -26,7 +26,7 @@ export default function SlideWrapper({ children }: { children: ReactNode }) {
         {children}
       </main>
 
-      <ViewTransition name="footer">
+      <ViewTransition>
         <footer
           className="flex justify-between text-center"
           style={{ viewTransitionName: 'footer' }}

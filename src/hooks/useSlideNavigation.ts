@@ -12,7 +12,8 @@ export function useSlideNavigation() {
     '/ViewTransitions',
     '/ViewTransitions2',
     '/ViewTransitionsInReact',
-    '/TechStack',
+    '/ViewTransitionsInReact2',
+    '/Demo',
     '/Hurdles',
     '/ThankYou',
   ]; // Define slide routes in order
