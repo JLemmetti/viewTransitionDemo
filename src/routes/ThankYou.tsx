@@ -21,7 +21,14 @@ function RouteComponent() {
         className="mx-auto mt-10"
       />
       <p className="mt-10 text-center text-4xl">
-        https://github.com/JLemmetti/viewTransitionDemo
+        <a
+          href="https://github.com/JLemmetti/viewTransitionDemo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:text-blue-300"
+        >
+          https://github.com/JLemmetti/viewTransitionDemo
+        </a>
       </p>
     </SlideWrapper>
   );
