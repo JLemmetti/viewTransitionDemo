@@ -12,10 +12,10 @@ function RouteComponent() {
   return (
     <SlideWrapper>
       <div className="header-fancy w-full flex flex-col items-center justify-center h-full">
-        <h1 className="text-center text-5xl mb-6">
+        <h1 className="text-center text-8xl mb-6">
           Unlocking Native Animations
         </h1>
-        <h2 className="text-center text-3xl">
+        <h2 className="text-center text-4xl">
           The View Transition API and React
         </h2>
       </div>

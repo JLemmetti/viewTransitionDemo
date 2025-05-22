@@ -13,13 +13,13 @@ function RouteComponent() {
 
   return (
     <SlideWrapper>
-      <SlideHeader title="Thank You!" className="text-center" />
+      <SlideHeader title="Thank You!" className="text-center text-6xl mb-8" />
 
       <p className="text-center text-3xl">Questions?</p>
 
       <QRCodeSVG
         value="https://github.com/JLemmetti/viewTransitionDemo"
-        size={300}
+        size={400}
         className="mx-auto mt-10"
       />
       <p className="mt-10 text-center text-4xl">

@@ -13,7 +13,7 @@ function RouteComponent() {
   return (
     <SlideWrapper>
       <div className="w-full outline-gray-700 flex flex-col items-center justify-center h-full">
-        <SlideHeader title="Demo" className="self-center" />
+        <SlideHeader title="Demo" className="self-center text-8xl" />
       </div>
     </SlideWrapper>
   );
