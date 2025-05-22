@@ -24,6 +24,7 @@ export function useSlideNavigation() {
       const currentPath = router.state.location.pathname;
       const currentIndex = slideRoutes.indexOf(currentPath);
 
+      // Slide navigation
       if (
         event.key === 'ArrowRight' ||
         event.key === 'ArrowDown' ||
@@ -35,6 +36,14 @@ export function useSlideNavigation() {
         const prevIndex =
           (currentIndex - 1 + slideRoutes.length) % slideRoutes.length; // Wrap around to the last slide
         router.navigate({ to: slideRoutes[prevIndex] });
+      } else if (event.key === 'f' || event.key === 'F') {
+        // Toggle fullscreen mode
+        const doc = document.documentElement;
+        if (!document.fullscreenElement) {
+          doc.requestFullscreen?.();
+        } else {
+          document.exitFullscreen?.();
+        }
       }
     };
 
