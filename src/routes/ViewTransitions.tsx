@@ -1,21 +1,13 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { useSlideNavigation } from '@hooks/useSlideNavigation';
 import SlideHeader from '@components/SlideHeader';
-import SlideWrapper from '@components/SlideWrapper';
 import SlideList from '@components/SlideList';
 import SlideListItem from '@components/SlideListItem';
-import CodeExample from '@components/CodeExample';
+import SlideWrapper from '@components/SlideWrapper';
+import { useSlideNavigation } from '@hooks/useSlideNavigation';
+import { createFileRoute } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/ViewTransitions')({
   component: RouteComponent,
 });
-
-const css = `::view-transition-new(slideUp) {
-  animation: slide-in 0.5s ease-in-out;
-  }
-::view-transition-old(slideUp) {
-  animation: slide-out 0.5s ease-in-out;
-}`;
 
 function RouteComponent() {
   useSlideNavigation();
@@ -40,10 +32,6 @@ function RouteComponent() {
           <SlideListItem>&lt;Suspense&gt;</SlideListItem>
         </SlideList>
       </SlideList>
-
-      {/* <div className="w-1/2">
-          <CodeExample>{css}</CodeExample>
-        </div> */}
     </SlideWrapper>
   );
 }

@@ -14,17 +14,28 @@ function RouteComponent() {
   const [boxes, setBoxes] = useState([0, 1, 2, 3]);
   const [nextId, setNextId] = useState(4);
 
-  const removeBox = (index: number) => {
-    setBoxes((prev) => prev.filter((_, i) => i !== index));
-  };
-
   const addBox = () => {
     setBoxes((prev) => [...prev, nextId]);
     setNextId((prev) => prev + 1);
   };
 
+  const removeBox = (index: number) => {
+    setBoxes((prev) => prev.filter((_, i) => i !== index));
+  };
+
+
   return (
     <div className="flex flex-col items-center space-y-4">
+      <button
+        className="mt-8 px-4 py-2 bg-green-500 text-white rounded cursor-pointer"
+        onClick={() =>
+          startTransition(() => { //! <--
+            addBox();
+          })
+        }
+      >
+        Add Box
+      </button>
       <div className="flex space-x-4 space-y-4 flex-wrap">
         {boxes.map((box) => (
           <ViewTransition key={box}>
@@ -44,16 +55,7 @@ function RouteComponent() {
           </ViewTransition>
         ))}
       </div>
-      <button
-        className="mt-8 px-4 py-2 bg-green-500 text-white rounded"
-        onClick={() =>
-          startTransition(() => {
-            addBox();
-          })
-        }
-      >
-        Add Box
-      </button>
+
     </div>
   );
 }
