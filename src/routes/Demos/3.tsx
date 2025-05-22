@@ -34,15 +34,15 @@ function RouteComponent() {
           <h2 className="mb-6 text-6xl font-bold">{selectedMovie}</h2>
 
           <div className="flex justify-between">
-            <div style={{ viewTransitionName: 'description' }}>
+            <div style={{ viewTransitionName: 'description' }}> {/* <--- ::view-transition-new(description) */}
               <p className="mt-6 text-2xl">Directed by: Christopher Nolan</p>
               <p className="py-8 text-2xl">Details about {selectedMovie}...</p>
             </div>
-            <ViewTransition name={`movie-${selectedMovie}`}>
+            <ViewTransition name={`movie-${selectedMovie}`}> {/* <--- Unique name */}
               <div
                 className="w-50 h-75 bg-blue-500 text-2xl text-white flex items-center justify-center cursor-pointer rounded"
                 onClick={() =>
-                  startTransition(() => {
+                  startTransition(() => { //! <--
                     setSelectedMovie(null);
                   })
                 }
@@ -53,9 +53,9 @@ function RouteComponent() {
           </div>
 
           <button
-            className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
+            className="mt-4 px-4 py-2 bg-red-500 text-white rounded cursor-pointer"
             onClick={() =>
-              startTransition(() => {
+              startTransition(() => { //! <--
                 setSelectedMovie(null);
               })
             }
@@ -68,8 +68,8 @@ function RouteComponent() {
         {!selectedMovie &&
           movies.map((movie) => (
             <ViewTransition
-              name={`movie-${movie}`}
-              default="slow-fade"
+              name={`movie-${movie}`} //! <-- Unique name
+              default="slow-fade" //! <-- Animation defined in CSS
               key={movie}
             >
               <div

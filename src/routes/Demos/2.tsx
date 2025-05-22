@@ -11,7 +11,7 @@ export const Route = createFileRoute('/Demos/2')({
 
 function RouteComponent() {
   const [_transition, startTransition] = useTransition();
-  const [boxes, setBoxes] = useState([0, 1, 2, 3]);
+  const [boxes, setBoxes] = useState([0, 1, 2, 3]); //! <-- Initial boxes
   const [nextId, setNextId] = useState(4);
 
   const addBox = () => {
@@ -45,7 +45,7 @@ function RouteComponent() {
               }}
               className="w-32 h-32 bg-blue-500 text-white flex items-center justify-center rounded-2xl cursor-pointer"
               onClick={() =>
-                startTransition(() => {
+                startTransition(() => { //! <--
                   removeBox(boxes.indexOf(box));
                 })
               }

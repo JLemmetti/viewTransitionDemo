@@ -1,8 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router';
 import {
-  unstable_ViewTransition as ViewTransition,
+  unstable_ViewTransition as ViewTransition, //! <--
   useState,
-  useTransition,
+  useTransition, //! <--
 } from 'react';
 
 export const Route = createFileRoute('/Demos/1')({
@@ -10,7 +10,7 @@ export const Route = createFileRoute('/Demos/1')({
 });
 
 function RouteComponent() {
-  const [_transition, startTransition] = useTransition();
+  const [_transition, startTransition] = useTransition(); //! <--
   const [position, setPosition] = useState(0);
 
   const positions = [
@@ -22,15 +22,15 @@ function RouteComponent() {
 
   return (
     <div className="relative flex flex-col items-center">
-      <ViewTransition>
+      <ViewTransition> {/* <--- Wrap the animated element */}
         <div
           style={{
             transform: positions[position],
-            transition: 'transform 0.5s ease-in-out',
+            transition: 'transform 0.5s ease-in-out', //! Animation properties
           }}
           className="absolute mt-50 ml-10 bg-amber-800 inline p-2 text-2xl rounded-lg text-gray-50 cursor-pointer"
           onClick={() =>
-            startTransition(() =>
+            startTransition(() => //! <--- Start the asynchronous operation
               setPosition((position + 1) % positions.length)
             )
           }
