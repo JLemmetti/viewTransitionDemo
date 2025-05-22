@@ -63,6 +63,17 @@ npm run dev
 3. **Open your browser:**
    Visit [http://localhost:5173](http://localhost:5173) to view the app.
 
+## Useful Links
+
+- [React Labs: View Transitions, Activity, and more](https://react.dev/blog/2025/04/23/react-labs-view-transitions-activity-and-more)
+  The blog post that inspired this presentation
+- [React Documentation: \<ViewTransition>](https://react.dev/reference/react/ViewTransition)
+  A comprehensive guide to the View Transition API in React
+- [MDN: Using the View Transition API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using)
+  Lengthy post about the View Transition API
+- [MDN: View Transition API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API)
+  The API documentation
+
 ---
 
 © 2025 Jurkka Lemmetti. TampereJS Demo.
